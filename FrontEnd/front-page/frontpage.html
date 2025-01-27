@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+        }
+        .header{
+            background-color: black;
+            height: 60px;
+            display: flex;
+            padding-bottom: 5px;
+            width: 100%;
+            margin: 0rem;
+            position: fixed;
+
+            
+        }
+        .name{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            padding-top: 15px;
+            padding-left: 10px;
+            color: white
+        }
+        .suggestions ul{
+            
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1rem;
+            margin-left: 230px;
+            padding-top: 5px;
+        }
+        .suggestions li{
+            display: block;
+            flex-grow: 0.5;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        img{
+            display: block;
+            height: 2rem;
+            width: 2rem;
+            margin-left: 10px;
+        }
+        .icon ul{
+            margin-left: 330px;
+            display: flex; 
+            gap: 0.5rem;
+        }
+        .hero{
+            background-image: url("https://sb.kaleidousercontent.com/67418/4096x2304/92cde8ad40/pexels-abdulwahab-alawadhi-3422964.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 700px;
+        }
+        .text{
+            padding-top: 250px;
+            
+            padding-left: 50px;
+        }
+        .text b{
+            font-size: 60px;
+        }
+        .text p{
+            margin-top: 50px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .hero input{
+            height: 50px;
+            width: 800px;
+            margin-left: 50px;
+            margin-top: 50px;
+            
+        }
+        
+        .title{
+            background-color: white;
+            height: 150px;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .title b{
+            font-size: 30px;
+        }
+        .title p{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .categories{
+            display: flex;
+            padding: 10px;
+            background-color: black;
+            padding-top: 20px;
+            gap: 0.5rem;
+            
+        }
+        .categories .box1{
+            height: 300px;
+            width: 500px;
+            background-image: url("electric\ 2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .box1 b{
+            color: blueviolet;
+            font-size: 50px;     
+        }
+        .box1:hover{
+            transform: scale(1.1);
+        }
+        a:hover{
+            color: red;
+        }
+        .categories .box2{
+            height: 300px;
+            width: 500px;
+            background-image: url("new.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .box2 b{
+            color: blueviolet;
+            font-size: 50px;  
+        }
+        .box2:hover{
+            transform: scale(1.1);
+        }
+        .categories .box3{
+            height: 300px;
+            width: 500px;
+            background-image: url("old.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .box3 b{
+            color: blueviolet;
+            font-size: 50px;  
+        }
+        .box3:hover{
+            transform: scale(1.1);
+        }
+        .luxuary{
+            display: flex;
+            height: 300px;
+            background-color: black;
+            padding: 20px;
+        }
+        .luxuary b{
+            font-size: 20px;
+            color: white;
+        }
+        .luxuary img{
+            height: 200px;
+            width: 400px;
+
+        }
+        .luxuary #box:hover{
+            border: 1px solid white;
+        }
+        .luxuary #box{
+            padding: 10px;
+        }
+        
+        #shop{
+            color: black;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        #shop:hover{
+            background-color: black;
+            color: white;
+        }
+        #cat{
+            background-color: white;
+            color: black;
+            font-size: 30px;
+        }
+        #cat:hover{
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .family-friendly{
+            display: flex;
+            height: 300px;
+            background-color: black;
+            padding: 20px;
+        }
+        .family-friendly img{
+            height: 200px;
+            width: 400px;
+        }
+        .family-friendly b{
+            font-size: 20px;
+            color: white;
+        }
+        .family-friendly #box:hover{
+            border: 1px solid white;
+        }
+        .family-friendly #box{
+            padding: 10px;
+        }
+        .footerups{
+            height: 300px;
+            padding: 10px;
+            background-color: white;
+            display: flex;
+        }
+        .line1{
+            height: 200px;
+            width: 250px;
+            display: grid;
+            padding: 10px;
+        }
+        
+        #footup{
+            color: black;
+        }
+        #footup:hover{
+            color: blue;
+        }
+        .line2{
+            height: 200px;
+            width: 250px;
+            display: grid;
+            padding: 10px;
+        }
+        
+        .line3{
+            height: 200px;
+            width: 250px;
+            display: grid;
+            padding: 10px;
+        }
+        
+        .line4{
+            height: 200px;
+            width: 500px;
+            margin-left: 250px;
+            margin-top: 50px;
+        }
+        #input1{
+            width: 250px;
+            height: 50px;
+            border: 3px solid black;
+        }
+        #input2{
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            
+        }
+        .footerups b{
+            font-size: 25px;
+        }
+        .footer{
+            height: 100px;
+            border-top: 2px solid black;
+            background-color: white;
+            margin-left: 30px;
+            margin-right: 30px;
+            display: flex;
+            padding-top: 5px;
+        }
+        .footsugg ul{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1rem;
+            margin-left: 230px;
+            
+        }
+        .footsugg li{
+            display: block; 
+        }
+        .footsugg a{
+            color: black;
+        }
+        .footsugg a:hover{
+            color: blue;
+        }
+        .scroll-container {
+            width: 100%;            
+            overflow-x: auto;       
+            white-space: nowrap;    
+            padding: 10px 0;        
+            background-color: #f0f0f0;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .img {
+            display: inline-block;  
+            width: 300px;           
+            height: 200px;          
+            margin-right: 20px;     
+            object-fit: cover;      
+            border: 2px solid #ddd; 
+        }
+        .img img{
+            height: 200px;
+            width: 100%;
+        }
+        .img a{
+            color: black;
+        }
+        .scroll-item:hover{
+            transform: scale(1.1);
+        }
+        .footicon{
+            display: flex;
+            gap: 1rem;
+            margin-left: 250px;
+            margin-top: 15px;
+        }
+        .footicon a{
+            color: black;
+        }
+        .footicon a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name"><b> Carbe*cho</b></div>
+        <div class="suggestions">
+            <ul>
+            <li><a href="New Cars">New Cars</a></li>
+            <li><a href="Used Cars">Used Cars</a></li>
+            <li><a href="Electric Vehicle">Electric Vehicle</a></li>
+            <li><a href="Luxuary Collection">Luxuary Collection</a></li>
+            <li><a href="Family Cars">Family Cars</a></li>
+            <li><a href="Eco Friendly">Eco Friendly</a></li>
+        </ul>
+    </div>
+    <div class="icon">
+        <ul>
+        <a href="profile"><img src="profile-picture.png"></a>
+        <a href="cart"><img src="web.png"></a>
+    </ul>
+    </div>
+    </div>
+
+    <div class="hero">
+        <div class="text">
+        <b>Discover Your Next Car Today</b>
+    <p>At Carbencho, we revolutionize car buying with our AI-powered platform.<br>Explore a wide range of vehicles, get personalized recommendations, and enjoy <br>a seamless shopping experience.</p></div>
+        <input type="search" placeholder="Enter Your recommendations">
+    </div>
+    <div class="title">
+        <div class="line"><b>Vehicle Categories</b>
+        <br><p>Discover a wide range of cars tailored for you.</p></div>
+
+    </div>
+    <div class="categories">
+        <div class="box1" id="box"><b>Electric vehicles<br><a id="cat" href="#">Shop Now</a></b></div>
+        <div class="box2" id="box"><b>New vehicles<br><a id="cat" href="#">Shop Now</a></b></div>
+        <div class="box3" id="box"><b>Old vehicles<br><a id="cat" href="#">Shop Now</a></b></div>
+
+    </div>
+    <div class="title " id="luxuary">
+        <div class="line"><b>Luxuary vehicles</b>
+        <br><p>Explore our exclusive range of premium cars.</p></div>
+        <b ><a id="shop" href="#"> Shop Now</a></b>
+
+    </div>
+    <div class="luxuary">
+        <div class="box1" id="box" ><a href="#"><img src="audi.png"><br><b>Audi R8<br>$55,125</b></a></div>
+        <div class="box2" id="box" ><a href="#"><img src="lamborgini urus.jpeg"><br><b>Lamborgini Urus<br>$44,925</b></a></div>
+    </div>
+    <div class="title " >
+        <div class="line"><b>Family-Friendly Vehicles</b>
+        <br><p>Explore our selection of spacious and safe cars.</p></div>
+        <b ><a id="shop" href="#"> Shop Now</a></b>
+    </div>
+    <div class="family-friendly">
+        <div class="box1" id="box" ><a href="#"><img src="https://i.pinimg.com/1200x/58/80/e0/5880e021d7f2f716d63c5c582dd20dac.jpg"><br><b> Nissan Altima<br>$22,999.00</b></a></div>
+        <div class="box2" id="box" ><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZlNvDFOZfvVJFfcHDfQzdCO0AT49Ihv6XQ&s"><br><b>Chevrolet Malibu <br>$18,999.00</b></a></div>
+    </div>
+    <div class="scroll-container">
+        <div class="img"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcKspWUqCmsWpHxqqfmxTolgJHZQY6PnRf662Suq5kY7Y85zc" alt="Image 1" class="scroll-item"><b>Land Rover Range Rover</b></a></div>
+        <div class="img"><a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTJv8NgwVwebwC9jkpOeZurJ7wz9WeH3ZGlQ8B34ZcvIPQoOMLN" alt="Image 3" class="scroll-item"><b>Mercedes-Benz GLA</b></a></div>
+        <div class="img"><a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQxfScoHWDWI8DcLZokeef5ABVf4WsqhOelzui7eF6YiRgGU3E9" alt="Image 4" class="scroll-item"><b>Audi Q7</b></a></div>
+        <div class="img"><a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRSrfpmNm9WL6qOVY8OCeUwE2DiOuIN4UGAV4hq4uKo38ihEavL" alt="Image 5" class="scroll-item"><b>Jaguar XF</b></a></div>
+        <div class="img"><a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTZ5OgxgeN1WLdMvx7E4D6p8AJ7mKdovB2-ZNBbhtggyh7a2Bwa" alt="Image 5" class="scroll-item"><b>Mercedes-Benz S-Class</b></a></div>
+        <div class="img"><a href="#"><img src="https://i.pinimg.com/736x/be/9f/3f/be9f3f51514d122ff56dbbab42b20231.jpg" alt="Image 2" class="scroll-item"><b>BMW X5</b></a></div>
+    </div>
+
+    <div class="footerups">
+    <div class="line1">
+        <b>Explore</b>
+        <a href="#" id="footup">Sporty Cars</a>
+        <a href="#" id="footup">Compact Cars</a>
+        <a href="#" id="footup">New Cars</a>
+    </div>
+    <div class="line2">
+        <b>Our Cars</b>
+        <a href="#" id="footup">Used Cars</a>
+        <a href="#" id="footup">Electric Vehicles</a>
+        <a href="#" id="footup">Luxuary Collection</a>
+    </div>
+    <div class="line3">
+        <b>Family & Eco</b>
+        <a href="#" id="footup">Family Cars</a>
+        <a href="#" id="footup">Eco-Friendly</a>
+    </div>
+    <div class="line4">
+        <b>Stay Updated</b>
+        <p>Subscribe to our newsletter for the latest updates on new arrivals and exclusive offers.</p>
+        <input id="input1" type="email" placeholder="Enter your email">
+        <input id="input2" type="submit" placeholder="Subscribe">
+    </div>
+    </div>
+    
+    <div class="footer">
+        <p><b> &copy;2025 Carbencho.</b> All rights reserved.</p>
+        <div class="footsugg">
+            <ul>
+            <li><a href="Terms and Condition">Terms and Condition</a></li>
+            <li><a href="Privacy Policy">Privacy Policy</a></li>
+            <li><a href="Refund and Return Policy">Refund and Return Policy</a></li>
+            <li><a href="Shipping Policy">Shipping Policy</a></li>
+        </ul>
+    </div>
+    <div class="footicon">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </div>
+    
+    
+</body>
+</html>
