@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBecho - Login & Registration</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #4A90E2, #A569BD);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #357ABD;
+        }
+        .hidden {
+            display: none;
+        }
+        #Registration{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="role">Select Role</label>
+                <select id="role" name="role" required onchange="toggleAdminSection()">
+                    <option value="">Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="buyer">Buyer</option>
+                    <option value="seller">Seller</option>
+                </select>
+            </div>
+            
+            <div class="form-group hidden" id="adminCodeSection">
+                <label for="admin-code">Admin Verification Code</label>
+                <input type="password" id="admin-code" name="admin-code" placeholder="Enter admin code">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn"><a id="Registration" href="http://127.0.0.1:5500/Login%20Page/login.html">Continue</a></button>
+        </form>
+    </div>
+
+    <script>
+        function toggleAdminSection() {
+            let role = document.getElementById("role").value;
+            let adminSection = document.getElementById("adminCodeSection");
+            if (role === "admin") {
+                adminSection.classList.remove("hidden");
+            } else {
+                adminSection.classList.add("hidden");
+            }
+        }
+
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            let role = document.getElementById("role").value;
+            if (role === "admin") {
+                let adminCode = document.getElementById("admin-code").value;
+                if (adminCode !== "420") {
+                    alert("Incorrect Admin Code!");
+                    event.preventDefault();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
